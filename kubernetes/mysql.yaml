@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: static-web
+  name: static-database
   labels:
     role: myrole
 spec:
   containers:
-    - name: web
-      image: nginx
+    - name: mysql
+      image: mysql

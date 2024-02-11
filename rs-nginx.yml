@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSets
+metadata:
+  labels:
+    app: rs-simple
+  name: rs-simple
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rs-simple
+  template:
+    metadata:
+      labels:
+        app: rs-simple
+    spec:
+      containers:
+        - image: nginx
+          name: nginx
